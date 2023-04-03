@@ -125,7 +125,7 @@ header .btm nav > ul > li {
 }
 header .btm nav > ul > li > a {
   text-transform: uppercase;
-  padding: 15px 10px;
+  padding: 15px;
   display: block;
   font-weight: 700;
 }
@@ -144,4 +144,33 @@ header .btm nav > ul > li .sub {
 header .btm nav > ul > li .sub li a {
   padding: 10px;
   display: block;
+}
+
+main #right_popup #popup_btn {
+  border: 2px solid #aaa;
+  background-color: #fff;
+  width: 30px;
+}
+main #right_popup #popup_btn a {
+  background-color: #ff7f50;
+  width: 24px;
+  height: 24px;
+}
+main #right_popup #popup_btn a img {
+  width: 100%;
+}
+main #right_popup .contents {
+  text-align: center;
+  border: 2px solid #aaa;
+  background-color: #fff;
+  width: 500px;
+}
+main #right_popup .contents .user {
+  background-color: lime;
+}
+main #right_popup .contents .board {
+  background-color: pink;
+}
+main #right_popup .contents h2 + p img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

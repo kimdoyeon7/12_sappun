@@ -82,7 +82,7 @@ header {
             a:first-child {line-height: 500px;}
             .close {
                 position:absolute; right:20px; top:20px;
-                font-size:1.5rem; font-weight: 700; padding:10px;
+                font-size:1.5rem; font-weight:700; padding:10px;
             } //e:.close 메뉴닫기
         } //e:all_nav
     }//e:.top  
@@ -94,7 +94,7 @@ header {
                 > li {
                     position:relative;
                     > a {
-                        text-transform:uppercase; padding:15px 10px; display:block; font-weight:700;
+                        text-transform:uppercase; padding:15px; display:block; font-weight:700;
                     } //e:a / 메뉴들
                     > a:hover {color:$border_color; font-weight:700;}
                     .sub {
@@ -110,3 +110,37 @@ header {
         } //e:nav
     } //e:btm
 }//e:header
+
+// main 시작 
+main {
+    #right_popup {
+        #popup_btn {
+            border:2px solid $font_color2;
+            background-color: #fff; width:30px;
+            a {background-color: #ff7f50;
+                width:24px; height:24px;
+                img{width:100%;}
+            }
+        }//e:popup_btn
+        .contents { 
+            text-align:center;
+            border:2px solid $font_color2;
+            background-color: #fff; width:500px;
+            .info {img{}}
+            .info_contents {}
+            .user {
+                background-color: lime;
+                a {span{}}
+            } //e:user
+            .board {
+                background-color: pink;
+                a {}
+            }//e:board
+            h2 {}
+            h2+p {img{width:100%;}}
+            address {}
+            address+p {}
+        }
+    }//e:right_popup
+    .visual {}
+} // e:main
