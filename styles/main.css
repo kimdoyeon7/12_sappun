@@ -146,31 +146,95 @@ header .btm nav > ul > li .sub li a {
   display: block;
 }
 
+main #right_popup {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
 main #right_popup #popup_btn {
-  border: 2px solid #aaa;
   background-color: #fff;
   width: 30px;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-flow: column;
+}
+main #right_popup #popup_btn a:first-child {
+  background: #ff7f50;
 }
 main #right_popup #popup_btn a {
-  background-color: #ff7f50;
-  width: 24px;
-  height: 24px;
-}
-main #right_popup #popup_btn a img {
   width: 100%;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-right: none;
 }
 main #right_popup .contents {
-  text-align: center;
-  border: 2px solid #aaa;
+  border: 1px solid #aaa;
+  padding: 5px 30px;
   background-color: #fff;
   width: 500px;
+  height: 100vh;
+  text-align: left;
+}
+main #right_popup .contents .info {
+  padding: 20px 100px;
+}
+main #right_popup .contents .info img {
+  width: 100%;
+}
+main #right_popup .contents .info_contents {
+  color: #aaa;
+  line-height: 1.3em;
+  margin: 5px 0 20px;
+  text-align: center;
+  letter-spacing: -0.05em;
 }
 main #right_popup .contents .user {
   background-color: lime;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  line-height: 1.7em;
+}
+main #right_popup .contents .user a {
+  border-bottom: 1px solid #aaa;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+main #right_popup .contents .user a span {
+  color: #ff7f50;
 }
 main #right_popup .contents .board {
   background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-transform: uppercase;
+  line-height: 1.7em;
+  margin: 40px 0;
+}
+main #right_popup .contents .board a {
+  border-bottom: 1px solid #aaa;
+  margin-right: 10px;
+}
+main #right_popup .contents h2 {
+  text-transform: capitalize;
+  padding: 20px 0;
+  font-weight: 800;
+}
+main #right_popup .contents h2 + p {
+  width: 200px;
 }
 main #right_popup .contents h2 + p img {
   width: 100%;
+}
+main #right_popup .contents address {
+  font-size: 2rem;
+  padding: 20px 0;
+  font-weight: 700;
+}
+main #right_popup .contents address + p {
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

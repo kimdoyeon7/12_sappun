@@ -111,35 +111,61 @@ header {
     } //e:btm
 }//e:header
 
-// main 시작 
+// main 시작 350 * 
 main {
     #right_popup {
+        position:fixed; right:0; top:0;
+        display:flex; align-items:center;
         #popup_btn {
-            border:2px solid $font_color2;
             background-color: #fff; width:30px;
-            a {background-color: #ff7f50;
-                width:24px; height:24px;
-                img{width:100%;}
+            border:1px solid $font_color2;
+            display:flex; flex-flow:column;
+            a:first-child{background:$border_color;}
+            a {width:100%; padding:5px; text-align:center;
+                border:1px solid $font_color2;
+                border-right:none;
+                img{}
             }
         }//e:popup_btn
         .contents { 
-            text-align:center;
-            border:2px solid $font_color2;
-            background-color: #fff; width:500px;
-            .info {img{}}
-            .info_contents {}
+            border: 1px solid $font_color2; padding:5px 30px;
+            background-color: #fff; width:500px; height:100vh;
+            text-align:left;
+            .info {padding:20px 100px; 
+                img{width:100%;}
+            }
+            .info_contents {
+                color:$font_color2; line-height:1.3em; 
+                margin:5px 0 20px; text-align:center; letter-spacing: -0.05em;
+            }
             .user {
                 background-color: lime;
-                a {span{}}
+                display:grid;
+                grid-template-columns:repeat(2,1fr);
+                line-height:1.7em;
+                a {
+                    border-bottom:1px solid $font_color2;
+                    margin-right:10px; text-transform:uppercase;
+                    span{color:$border_color;}
+                }
             } //e:user
             .board {
                 background-color: pink;
-                a {}
+                display:grid;
+                grid-template-columns:repeat(2,1fr);
+                text-transform:uppercase;
+                line-height:1.7em;
+                margin:40px 0;
+                a {border-bottom:1px solid $font_color2;
+                    margin-right:10px;}
             }//e:board
-            h2 {}
-            h2+p {img{width:100%;}}
-            address {}
-            address+p {}
+            h2 {text-transform:capitalize; padding:20px 0; font-weight:800;}
+            h2+p {
+                width:200px;
+                img{width:100%;}
+            }
+            address {font-size:2rem; padding:20px 0; font-weight:700;}
+            address+p {text-transform: uppercase; line-height:1.5em; font-weight:600;}
         }
     }//e:right_popup
     .visual {}
