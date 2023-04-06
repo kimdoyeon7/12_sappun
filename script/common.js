@@ -37,21 +37,54 @@ nav_acc[12].addEventListener('mouseout',function(){
     nav_acc_sub[0].style.display = 'none'
 })
 //7. 5-6 통일 mouseove, mouseout로 lang 나올수 있게 
-kr_lnb.addEventListener('mouseover',function(){
-    kr_lnb_open.style.display = 'block'
+// kr_lnb.addEventListener('mouseover',function(){
+//     kr_lnb_open.style.display = 'block'
+// })
+// kr_lnb.addEventListener('mouseout',function(){
+//     kr_lnb_open.style.display = 'none'
+// })
+
+//7. 5-6 kr - if로 하기
+let kr_lnb_lang = true
+kr_lnb.addEventListener('click',function(){
+    if(kr_lnb_lang){
+        // console.log('보이기')
+        kr_lnb_open.style.display = 'block'
+    }else{
+        // console.log('숨기기')
+        kr_lnb_open.style.display = 'none'
+    }
+    kr_lnb_lang = !kr_lnb_lang
 })
-kr_lnb.addEventListener('mouseout',function(){
-    kr_lnb_open.style.display = 'none'
-})
+
+
+
+
+
 // 화살표를 눌렀을 때, 팝업  내용이 보이게 
 // ---------변수
 const right_popup = document.querySelector('#right_popup')
 const popup_btn = document.querySelector('#popup_btn a:first-child')
 console.log(right_popup, popup_btn)
-// 1. right 500 숨기기
-right_popup.style.transform = 'translateX(500px)'
-// 2. popup_btn 클릭 -> right 보이기
+// // 1. right 500 숨기기
+// right_popup.style.transform = 'translateX(500px)'
+// // 2. popup_btn 클릭 -> right 보이기
+// popup_btn.addEventListener('click',function(){
+//     right_popup.style.transition = 'all 0.5s'
+//     right_popup.style.transform = 'translateX(0)'
+// })
+
+//right popup if 연습 ----------------------------------------
+let popup_boolean = true // popup을 논리데이터로
 popup_btn.addEventListener('click',function(){
     right_popup.style.transition = 'all 0.5s'
-    right_popup.style.transform = 'translateX(0)'
+    // right_popup.style.transform = 'translateX(0)'
+    if(popup_boolean){
+        // console.log('보이기')
+        right_popup.style.transform = 'translateX(0)'
+    }else{
+        // console.log('숨기기')
+        right_popup.style.transform = 'translateX(500px)'
+    }
+    popup_boolean = !popup_boolean
 })
