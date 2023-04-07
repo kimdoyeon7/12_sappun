@@ -1,0 +1,79 @@
+// 변수지정 
+$border_color:#ff7f50; /* 무료배송쿠폰 테두리 */
+$font_color1:#222; 
+$bg_color:#eee;
+$box_best:#ffe4c4; /* 상품 밑 박스 */
+$box_order:#000080; /* 상품 밑 박스 */
+$font_color2:#aaa;
+$wh:#fff;
+$order_bar:#ff69b4;
+// 전체 w 1200px
+// 주문영역 w 380px
+// 레이아웃 구분 배경색 적용하기 
+// container의 너비값은 calc 계산법 이용 380을 뺀 나머지 처리하기
+@mixin layout {width:1200px; margin:0 auto;}
+@mixin grid-columns-2-1fr {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    justify-content: space-between;
+}
+
+
+
+
+
+//----------------------------------------------------------
+main {
+    @include layout;
+    display:flex; flex-flow:row nowrap;
+    .container {
+        background:pink;
+        width:calc(100% - 380px);
+    }//e:container
+
+
+    // aside
+    aside {
+        background:aqua;
+        width:380px; height:100vh;
+        position:sticky; right:0; top:0;
+        .like { display:inline-block;
+            img{width:100%;}
+        }// e:like
+        h1 {margin:20px 0; font-size:1.2rem; font-weight:700;}
+        dl {
+            display:inline-block;
+            @include grid-columns-2-1fr;
+            text-transform: uppercase;
+            > * {margin:20px 0;}
+            dt {}
+            dd {
+                text-align:right;
+                select {
+                    padding:10px 80px;
+                    text-align:left;
+                    option{}
+                }
+            }
+            dd:nth-child(2) {color:$font_color2;}
+        }//e:dl
+        .order {
+            // text-align: center;
+            width:380px;
+            .price_wrap {
+                // background-color: #ff69b4;
+                @include grid-columns-2-1fr();
+                padding:20px 0;
+                > *, > * > * {font-size:1.8rem; color:$border_color;}
+                p:last-child {text-align:right;}
+            }//e:price_wrap
+            #buy {
+                background-color:$border_color; display: block; margin:0 auto; color: #fff;
+                text-transform: uppercase; 
+                padding:25px 140px;
+            }
+            #cart {background-color: #aaa;  text-align: center;}
+            #view {background-color: #ffe4c4; text-align: center;}
+        } //e:order
+    }//e:aside
+}

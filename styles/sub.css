@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* 무료배송쿠폰 테두리 */
+/* 상품 밑 박스 */
+/* 상품 밑 박스 */
+main {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .container {
+  background: pink;
+  width: calc(100% - 380px);
+}
+main aside {
+  background: aqua;
+  width: 380px;
+  height: 100vh;
+  position: sticky;
+  right: 0;
+  top: 0;
+}
+main aside .like {
+  display: inline-block;
+}
+main aside .like img {
+  width: 100%;
+}
+main aside h1 {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+main aside dl {
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+main aside dl > * {
+  margin: 20px 0;
+}
+main aside dl dd {
+  text-align: right;
+}
+main aside dl dd select {
+  padding: 10px 80px;
+  text-align: left;
+}
+main aside dl dd:nth-child(2) {
+  color: #aaa;
+}
+main aside .order {
+  width: 380px;
+}
+main aside .order .price_wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding: 20px 0;
+}
+main aside .order .price_wrap > *, main aside .order .price_wrap > * > * {
+  font-size: 1.8rem;
+  color: #ff7f50;
+}
+main aside .order .price_wrap p:last-child {
+  text-align: right;
+}
+main aside .order #buy {
+  background-color: #ff7f50;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 25px 140px;
+}
+main aside .order #cart {
+  background-color: #aaa;
+  text-align: center;
+}
+main aside .order #view {
+  background-color: #ffe4c4;
+  text-align: center;
+}/*# sourceMappingURL=sub.css.map */

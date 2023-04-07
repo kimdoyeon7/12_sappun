@@ -80,7 +80,6 @@ header .top .right li a span {
   border-radius: 5px;
   padding: 3px 10px;
   position: absolute;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   left: -50%;
